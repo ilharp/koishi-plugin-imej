@@ -28,5 +28,15 @@
   },
   "peerDependencies": {
     "koishi": "^4.11.7"
+  },
+  "koishi": {
+    "service": {
+      "required": [
+        "puppeteer"
+      ],
+      "implements": [
+        "imej"
+      ]
+    }
   }
 }
