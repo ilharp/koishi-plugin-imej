@@ -17,6 +17,10 @@
     "koishi",
     "plugin"
   ],
+  "dependencies": {
+    "handlebars": ">=4.0.0",
+    "normalize.css": ">=8.0.0"
+  },
   "devDependencies": {
     "atsc": "^1.2.2",
     "koishi": "^4.11.0",
