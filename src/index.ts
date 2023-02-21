@@ -59,15 +59,14 @@ export class ImejService extends Service {
     )
   }
 
-  define(template: string, htd: Template) {
-    this.#templates[template] = htd
+  define(template: string, templateDelegate: Template) {
+    this.#templates[template] = templateDelegate
     this.#logger.info('load template ' + template)
   }
 
   render(layout: string, slots: Record<string, unknown>): string {
     const template = this.#config.layoutMap[layout] ?? layout
     const result = this.#templates[template]({ prelude: this.#prelude, slots })
-    console.log(result)
     return result
   }
 }
